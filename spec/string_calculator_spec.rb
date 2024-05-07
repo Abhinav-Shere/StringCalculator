@@ -13,4 +13,12 @@ RSpec.describe StringCalculator, "#add" do
     expect(described_class.add("1,2")).to eql(3)
   end
 
+  it "treats new lines as delimiters and returns the sum" do
+    expect(described_class.add("1\n2,3")).to eql(6)
+  end
+
+  it "uses the custom delimiter and returns the sum" do
+    expect(described_class.add("//;\n1;2")).to eql(3)
+  end
+
 end
