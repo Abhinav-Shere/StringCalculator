@@ -25,4 +25,8 @@ RSpec.describe StringCalculator, "#add" do
     expect(described_class.add("2,1001")).to eql(2)
   end
 
+  it "throws an exception for negative numbers" do
+    expect { described_class.add("-1,2,-3") }.to raise_error("Negatives not allowed")
+  end
+
 end
