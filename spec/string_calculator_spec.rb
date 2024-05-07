@@ -21,4 +21,8 @@ RSpec.describe StringCalculator, "#add" do
     expect(described_class.add("//;\n1;2")).to eql(3)
   end
 
+  it "ignores numbers bigger than 1000 and returns the sum" do
+    expect(described_class.add("2,1001")).to eql(2)
+  end
+
 end
