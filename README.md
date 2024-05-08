@@ -4,7 +4,7 @@ This String Calculator is a simple utility designed to sum up numbers passed as 
 ## Setup Instructions:
 
 ## Cloning the Repository:
-Users are instructed to clone the repository using the command -> git clone <repo-name>.
+Users are instructed to clone the repository using the command -> git clone < github-url >.
 This ensures that users have access to the latest version of the codebase.
 
 ## Basic Functionality:
@@ -39,10 +39,10 @@ Newline characters are supported to enhance readability and usability.
 The module implements exception handling for negative numbers, providing clear feedback by listing all negative numbers in the exception message.
 
 ## Installing Dependencies:
-Running bundle install after cloning the repository installs all necessary dependencies.
+Running < bundle install > after cloning the repository installs all necessary dependencies.
 This step ensures that the project can be run seamlessly on the user's local environment.
 Running Tests:
-The instruction to execute rspec spec indicates that the project utilizes RSpec for testing.
+The command to execute test cases is < rspec spec > which indicates that the project utilizes RSpec for testing.
 Users are encouraged to run the provided RSpec tests to ensure the correctness of the module's functionality.
 
 ## Ruby Version Compatibility:
