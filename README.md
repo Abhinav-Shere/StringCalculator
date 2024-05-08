@@ -1,18 +1,56 @@
-## StringCalculator is a Ruby module that provides a simple method for adding numbers contained within a string. This module is useful for parsing and calculating sums from strings that contain comma-separated numbers.
+## String Calculator:
+This String Calculator is a simple utility designed to sum up numbers passed as a comma-separated string. It offers flexible features to handle various input formats and customization options.
 
-## What I've done: 
-- Simple cases are handled, including empty string, single numbers, and two numbers, yielding the expected sum.
-- Code is regularly refactored post successful tests, maintaining simplicity and readability, with broad test coverage to handle various input formats.
-- The `add` method accommodates any number of comma or newline-separated numbers, ensuring flexibility and scalability.
-- Newline handling and custom delimiters are supported, allowing users to define delimiters via a separate line at the input's start.
-- Exception handling for negative numbers is implemented, triggering an exception with all negative numbers listed, separated by commas, for clear user feedback.
+## Setup Instructions:
 
-## To setup project
-- Clone repo using cmd : git clone <repo-name>
-- Run `bundle install` to install dependencies
+## Cloning the Repository:
+Users are instructed to clone the repository using the command -> git clone <repo-name>.
+This ensures that users have access to the latest version of the codebase.
 
-## Ruby version used
--  Ruby -> 2.6.8
+## Basic Functionality:
+The add method takes a string of comma-separated numbers as input and returns their sum as an integer.
+# Examples:
+Input: "" (empty string) → Output: 0
+Input: "1" → Output: 1
+Input: "1,5" → Output: 6
 
-## To run rspec 
-- rspec spec
+# Handling New Lines:
+The calculator can handle new lines between numbers in addition to commas.
+Example: Input: "1\n2,3" → Output: 6
+
+# Custom Delimiters:
+Users can specify a custom delimiter by starting the string with "//[delimiter]\n".
+Example: Input: "//;\n1;2" (using ";" as delimiter) → Output: 3
+
+# Error Handling:
+Negative numbers are not allowed and will result in an exception.
+If multiple negative numbers are present, all of them will be listed in the exception message, separated by commas.
+This calculator provides a flexible and robust solution for summing up numbers from strings, accommodating various input formats and allowing customization through delimiters.
+
+## Refactoring and Readability:
+The code undergoes regular refactoring post successful tests to maintain simplicity and readability.
+Broad test coverage ensures that the functionality remains intact across different input formats.
+
+## Customization Options:
+Users have the flexibility to define custom delimiters via a separate line at the start of input strings.
+Newline characters are supported to enhance readability and usability.
+
+## Exception Handling:
+The module implements exception handling for negative numbers, providing clear feedback by listing all negative numbers in the exception message.
+
+## Installing Dependencies:
+Running bundle install after cloning the repository installs all necessary dependencies.
+This step ensures that the project can be run seamlessly on the user's local environment.
+Running Tests:
+The instruction to execute rspec spec indicates that the project utilizes RSpec for testing.
+Users are encouraged to run the provided RSpec tests to ensure the correctness of the module's functionality.
+
+## Ruby Version Compatibility:
+The Gemfile specifies that the module is compatible with Ruby version 2.6.8.
+Users are advised to ensure that they have the correct Ruby version installed to avoid compatibility issues.
+
+## Screenshot attached for test cases:
+Attached is a screenshot demonstrating the successful execution of test cases.
+
+
+![alt text](<Screenshot from 2024-05-08 14-04-34.png>)
